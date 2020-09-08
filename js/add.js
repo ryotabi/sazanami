@@ -1,9 +1,7 @@
 // firstviewのスライド
-
 const img1 = document.getElementById('fv-img1')
 const img2 = document.getElementById('fv-img2')
 const img3 = document.getElementById('fv-img3')
-
 
 const imgSlide = () => {
   if (img1.classList.contains('active')) {
@@ -19,8 +17,8 @@ const imgSlide = () => {
 }
 setInterval(imgSlide, 6000)
 
-//firstviewの文字
 
+//firstviewの文字
 $(function() {
     var $allMsg = $('#fv-title');
     var $wordList = $('#fv-title').html().split("");
@@ -34,9 +32,7 @@ $(function() {
 });
 
 
-
 // titleのフェードイン
-
 $(function(){
     $(window).scroll(function (){
         $('.title').each(function(){
@@ -50,8 +46,8 @@ $(function(){
     });
 });
 
-// point titleのイン
 
+// point titleのイン
 $(function(){
     $(window).scroll(function (){
         $('.point-title').each(function(){
@@ -64,6 +60,7 @@ $(function(){
         });
     });
 });
+
 
 // menu
 setTimeout(() => {
@@ -94,25 +91,25 @@ setTimeout(() => {
             });
         });
     });
-    },0)
+},0)
 
-    setTimeout(() => {
-        $(function(){
-            $(window).scroll(function (){
-                $('.menu-item3').each(function(){
-                    var elemPos = $(this).offset().top;
-                    var scroll = $(window).scrollTop();
-                    var windowHeight = $(window).height();
-                    if (scroll > elemPos - windowHeight + 150){
-                        $(this).addClass('show');
-                    }
-                });
+setTimeout(() => {
+    $(function(){
+        $(window).scroll(function (){
+            $('.menu-item3').each(function(){
+                var elemPos = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > elemPos - windowHeight + 150){
+                    $(this).addClass('show');
+                }
             });
         });
-        },0)
+    });
+},0)
+
 
 // カルーセル
-
 var mySwiper = new Swiper('.swiper-container', {
     loop: true,
     autoplay: {
@@ -152,8 +149,8 @@ var mySwiper = new Swiper('.swiper-container', {
 	},
 });
 
-// map
 
+// map
 $(function(){
     $(window).scroll(function (){
         $('.access-map iframe').each(function(){

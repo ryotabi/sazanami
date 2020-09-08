@@ -1,4 +1,3 @@
-
 $(function(){
     $(window).scroll(function (){
         $('.menu-item1').each(function(){
