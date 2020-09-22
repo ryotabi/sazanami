@@ -9,6 +9,7 @@ $(function(){
         
     });
 });
+
 $(function(){
     $('.recruit-tab2').click(function (){
         $('.recruit-tab1').removeClass('active');

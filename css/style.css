@@ -546,9 +546,9 @@ a.button.extra-small {
     transform: translateY(0%);
     top: 0;
 }
-.hide-menu {
+/* .hide-menu {
   transform: translateY(-100%);
-}
+} */
 .intelligent-header-space{
   height: 81px;
 }

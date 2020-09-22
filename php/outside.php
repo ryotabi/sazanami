@@ -7,22 +7,19 @@
 
 
 <div class="comment-display">
-   <h3 class="comment-title">＜コメント＞</h3>
-
-   <?PHP
-    $file_name = "../sendPHP/outside-send_2.txt"; /*読込ファイルの指定*/
-    $ret_array = file($file_name); /*ファイルを全て配列に入れる*/
+    <h3 class="comment-title">＜コメント＞</h3>
+    <?PHP
+    $file_name = "../sendPHP/outside-send_2.txt"; 
+    $ret_array = file($file_name); 
     ?>
     <?php for( $i = 0; $i < count($ret_array); ++$i ):?> 
-        
       <div class="comment-wrap">
-      <?php echo ( $ret_array[$i] . "<br />\n" )  ; ?>
+        <?php echo ( $ret_array[$i] . "<br />\n" )  ; ?>
       </div>
-
   <?php endfor;?>
 </div>
 
-<form action="../sendPHP/outside-send_1.php" method="post" class="comment-form"> <!--ファイル、methodの指定-->
+<form action="../sendPHP/outside-send_1.php" method="post" class="comment-form"> 
       <div class="form-wrap">
         <label for="name">ニックネーム</label>
         <input type="text" name="name" class="form-name " id="name" required>
