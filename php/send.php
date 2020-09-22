@@ -8,7 +8,6 @@ $tel = $_GET['tel'];
 $email = $_GET['email'];
 $day = $_GET['day'];
 $content = $_GET['content'];
-
 $toEmail='sryotapersian@gmail.com';
 $subject="応募が届きました";
 
@@ -27,42 +26,35 @@ $content = <<< END
 
 END;
 
-if(mb_send_mail($toEmail,$subject,$content)){
-    echo "応募フォームが送信されました。
-    1週間以内に送っていただいた電話番号、またはメールアドレスにご連絡致しますので、少々お待ちください。";
-};
+mb_send_mail($toEmail,$subject,$content);
+
 ?>
 
 <!doctype html>
-<html class="no-js" lang="en-US">
+<html class="no-js" lang="ja">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>そば処 さざなみ</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <!-- PLACE FAVICON.ICO IN THE ROOT DIRECTORY -->
         <link rel="icon" href="../img/ryota/icon.png">
-
         <!-- Fonts -->
 		<link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,100,300,700,900' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
-
 		<!-- All CSS FILES -->
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/font-awesome.min.css">    
         <link rel="stylesheet" href="../css/et-line-iocn.css">    
         <link rel="stylesheet" href="../css/elements.css">    
-		<link rel="stylesheet" href="../cs/style.css">
+		<link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/responsive.css">
         <link rel="stylesheet" href="../css/add_style.css">
         <link rel="stylesheet" href="../css/recruit.css">
 		<!-- MODERNIZE JS -->
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-
     </head>
 
 <body>
@@ -74,8 +66,8 @@ if(mb_send_mail($toEmail,$subject,$content)){
                 <div class="row">
                     <div class="col-md-4  col-sm-2 col-xs-6 tab-hd">
                         <div class="logo">
-                            <img src="img/images/icon.png" alt="" class="hd-icon">
-                            <h3 class="hd-title"><a href="http://ryota-portfolio.sakura.ne.jp/sazanami/index.html">さざなみ</a></h3>
+                            <img src="../img/images/icon.png" alt="" class="hd-icon">
+                            <h3 class="hd-title"><a href="http://s-ryota.sakura.ne.jp/sazanami/index.php">さざなみ</a></h3>
                         </div>
                     </div>
                     <div class="col-md-8 col-sm-10 hidden-xs hidden-sm">
@@ -83,19 +75,19 @@ if(mb_send_mail($toEmail,$subject,$content)){
                             <nav>
                                 <ul class="main-menu hover-style-one clearfix">
                                 <div class="hd-nav-wrap">
-                                        <li><a href="http://ryota-portfolio.sakura.ne.jp/sazanami/index.html">ホーム</a>
+                                        <li><a href="http://s-ryota.sakura.ne.jp/sazanami/index.php">ホーム</a>
                                         </li>
                                     </div>
                                     <div class="hd-nav-wrap">
-                                        <li><a href="http://ryota-portfolio.sakura.ne.jp/sazanami/menu.html">メニュー</a>
+                                        <li><a href="http://s-ryota.sakura.ne.jp/sazanami/menu.html">メニュー</a>
                                         </li>
                                     </div>
                                     <div class="hd-nav-wrap">
-                                        <li><a href="http://ryota-portfolio.sakura.ne.jp/sazanami/news.html">お知らせ</a>
+                                        <li><a href="http://s-ryota.sakura.ne.jp/sazanami/news.html">お知らせ</a>
                                         </li>                                            
                                     </div>
                                     <div class="hd-nav-wrap">
-                                        <li><a href="http://ryota-portfolio.sakura.ne.jp/sazanami/recruit.html">採用</a>
+                                        <li><a href="http://s-ryota.sakura.ne.jp/sazanami/recruit.html">採用</a>
                                         </li>                                            
                                     </div>
                                     <div class="line">
@@ -111,10 +103,10 @@ if(mb_send_mail($toEmail,$subject,$content)){
                     <div class="mobile-menu-area clearfix hidden-md hidden-lg">
                         <nav class="mobile-menu">
                             <ul>
-                                <li><a href="http://ryota-portfolio.sakura.ne.jp/sazanami/index.html">ホーム</a></li>
-                                <li><a href="http://ryota-portfolio.sakura.ne.jp/sazanami/menu.html">メニュー</a></li>
-                                <li><a href="http://ryota-portfolio.sakura.ne.jp/sazanami/news.html">お知らせ</a></li>                                        
-                                <li><a href="http://ryota-portfolio.sakura.ne.jp/sazanami/recruit.html">採用</a></li>                                                                       
+                                <li><a href="http://s-ryota.sakura.ne.jp/sazanami/index.php">ホーム</a></li>
+                                <li><a href="http://s-ryota.sakura.ne.jp/sazanami/menu.html">メニュー</a></li>
+                                <li><a href="http://s-ryota.sakura.ne.jp/sazanami/news.html">お知らせ</a></li>                                        
+                                <li><a href="http://s-ryota.sakura.ne.jp/sazanami/recruit.html">採用</a></li>                                                                       
                             </ul>
                         </nav>
                     </div>
@@ -132,7 +124,7 @@ if(mb_send_mail($toEmail,$subject,$content)){
                         ご応募ありがとうございました。<br>
                         1週間以内に送っていただいた電話番号、またはメールアドレスにご連絡致しますので、少々お待ちください。
                     </p>
-                    <div class="toform-btn"><a href="index.html"><p class="btn-text">ホームへ</p></a></div>
+                    <div class="toform-btn"><a href="index.php"><p class="btn-text">ホームへ</p></a></div>
                 </div>
             </div>
         </div>
@@ -143,21 +135,20 @@ if(mb_send_mail($toEmail,$subject,$content)){
             <div class="row">
                 <div class="col-md-4  col-sm-2 col-xs-6">
                     <div class="logo">
-                        <img src="img/images/icon.png" alt="" class="hd-icon">
-                        <h3 class="hd-title"><a href="../index.html">さざなみ</a></h3>
+                        <img src="../img/images/icon.png" alt="" class="hd-icon">
+                        <h3 class="hd-title"><a href="../index.php">さざなみ</a></h3>
                     </div>
                 </div>
                 <div class="col-md-8 ft-nav-wrap">
                     <ul>
-                        <li><a href="http://ryota-portfolio.sakura.ne.jp/sazanami/menu.html">メニュー</a></li>
-                        <li><a href="http://ryota-portfolio.sakura.ne.jp/sazanami/news.html">お知らせ</a></li>
-                        <li><a href="http://ryota-portfolio.sakura.ne.jp/sazanami/recruit.html">採用</a></li>
+                        <li><a href="http://s-ryota.sakura.ne.jp/sazanami/menu.html">メニュー</a></li>
+                        <li><a href="http://s-ryota.sakura.ne.jp/sazanami/news.html">お知らせ</a></li>
+                        <li><a href="http://s-ryota.sakura.ne.jp/sazanami/recruit.html">採用</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-
 </div>
 <script src="../js/vendor/jquery-1.12.0.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>

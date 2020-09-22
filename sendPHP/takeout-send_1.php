@@ -2,15 +2,10 @@
     $name = $_POST['name'];
     $comment = $_POST['comment'];
     $date = date("Y/m/d H:i:s");
-
-    $filename = 'takeout-send_1.txt'; /*保存先にファイル名を$filenameに代入*/
-
-    $fp = fopen($filename,'a'); /*ファイルを追記モードで開く*/
-
-    fwrite($fp,$name.' : '.$comment.' 　( '.$date.')'."\n"); /*情報をファイルに書き込む*/
-
-    fclose($fp); /*ファイルを閉じる*/
-    unlink('takeout-send_2.txt'); /*ここでtoukou_2.txtを削除するコードを入れておく。*/
-
+    $filename = 'takeout-send_1.txt'; 
+    $fp = fopen($filename,'a'); 
+    fwrite($fp,$name.' : '.$comment.' 　( '.$date.')'."\n");
+    fclose($fp); 
+    unlink('takeout-send_2.txt'); 
     header('Location:takeout-send_2.php'); 
-    ?>
+?>

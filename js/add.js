@@ -70,7 +70,7 @@ $(function(){
             var elemPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight + 150){
+            if (scroll > elemPos - windowHeight + 100){
                 $(this).addClass('show');
             }
         });
@@ -85,7 +85,7 @@ setTimeout(() => {
                 var elemPos = $(this).offset().top;
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
-                if (scroll > elemPos - windowHeight + 150){
+                if (scroll > elemPos - windowHeight + 100){
                     $(this).addClass('show');
                 }
             });
@@ -108,8 +108,35 @@ setTimeout(() => {
     });
 },0)
 
+// takeoutのカルーセル
 
-// カルーセル
+$(function() {
+    $('.takeout-items').slick({
+          infinite: true,
+          arrows: false,
+          dots:false,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          autoplay: true,
+          responsive: [{
+               breakpoint: 769,
+                    settings: {
+                         slidesToShow: 3,
+                         slidesToScroll: 3,
+               }
+          },{
+               breakpoint: 480,
+                    settings: {
+                         slidesToShow: 1,
+                         slidesToScroll: 1,
+                    }
+               }
+          ]
+     });
+});
+
+
+// photoのカルーセル
 var mySwiper = new Swiper('.swiper-container', {
     loop: true,
     autoplay: {
